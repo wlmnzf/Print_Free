@@ -1,0 +1,199 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script language="javascript" src="jquery-1.4.4.min.js"></script>
+<script language="javascript" src="jquery.jqprint-0.3.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+<link href="print.css" rel="stylesheet" media="print">
+
+<script language="javascript">
+$(document).ready(function(){
+    $(".book").jqprint({debug: true,importCSS: true, printContainer: true, operaSupport: true});
+})
+
+</script>
+   <style>
+@page {
+ size: A4;
+ margin: 0;
+}
+@media print {
+ .page {
+  margin: 0;
+  border: initial;
+  border-radius: initial;
+  width: initial;
+  min-height: initial;
+  box-shadow: initial;
+  background: initial;
+  page-break-after: always;
+ }
+ 
+ .w3cbbs { page-break-after:always;}
+body {
+ margin: 0;
+ padding: 0;
+ background-color: #FAFAFA;
+ font: 12pt "Tahoma";
+}
+* {
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
+}
+.page {
+ width: 21cm;
+ height: 29.7cm;
+
+ margin: 0 auto;
+ border: 1px #D3D3D3 solid;
+ border-radius: 5px;
+ background: white;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.subpage {
+
+ border: 5px red solid;
+ height: 100%;
+ 
+}
+
+}
+ 
+ }
+   </style>
+</head>
+<body>
+
+	   <div class="book">
+		 <div class="page w3cbbs">
+		  <div class="subpage">
+		  
+<table border="1" cellspacing="0" style="width:100%;margin-top:20px;margin-">
+<tr height="25px" >
+   <td>报修单号</td>
+    <td colspan="3">{7}</td>
+	<td>学生签字</td>
+	<td></td>
+</tr>
+    <tr height="25px">
+	     <td  rowspan="2" width="100px">
+		     报修地址
+		 </td>
+		 
+		 <td id="printflag" rowspan="2"  width="100px">
+		   {0}
+		 </td>
+		 
+		 <td rowspan="2"  width="100px">
+		     报修时间
+		 </td>
+		 
+		 <td id="printtime" rowspan="2"  width="100px">
+             {1}
+		 </td>
+		 
+		 <td  width="100px">
+		    申请人
+		 </td>
+		 
+		 <td id="printperson"  width="100px">
+		   {2}
+		 </td>
+	</tr>
+	
+	<tr  height="25px">
+
+		 <td>
+		   联系方式
+		 </td>
+		 
+		 <td id="printphone">
+		   {3}
+		 </td>
+	</tr>
+	
+	<tr height="100px">
+	   <td>报修项目</td>
+	   <td>{4}</td>
+	   <td>报修内容</td>
+	   <td>{5}</td>
+	   <td rowspan="2" colspan="2">{6}</td>
+	</tr>
+	
+	<tr height="100px">
+	   <td>维修人员</td>
+	   <td></td>
+	   <td>开始时间<br>完成时间</td>
+	   <td></td>
+	</tr>
+	
+	<tr height="25px">
+	    <td>使用材料</td>
+		<td>数量</td>
+		<td>单价</td>
+		<td>金额</td>
+		<td>材料提供</td>
+		<td>备注</td>
+	</tr>
+	
+	<tr height="25px">
+	    <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr height="25px">
+	    <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr height="25px">
+	    <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr height="25px">
+	    <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+		
+</table>
+
+		  
+		  
+		  
+		  </div> 
+		 </div>
+		 <div class="page w3cbbs">
+		  <div class="subpage">Page 2</div> 
+		 </div>
+		 <div class="page w3cbbs">
+		  <div class="subpage">Page 3</div> 
+		 </div>
+		  <div class="page w3cbbs">
+		  <div class="subpage">Page 4</div> 
+		 </div>
+		  <div class="page w3cbbs">
+		  <div class="subpage">Page 5</div> 
+		 </div>
+		  <div class="page w3cbbs">
+		  <div class="subpage">Page 6</div> 
+		 </div>
+		</div>
+</body>
+</html>
