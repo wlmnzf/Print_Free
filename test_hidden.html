@@ -6,10 +6,12 @@
 <link href="print.css" rel="stylesheet" media="print">
 <script language="javascript">
 function  a(){
- $(".book").jqprint({debug: true,importCSS: true, printContainer: true, operaSupport: true});
+ $(".book").jqprint({debug: false,importCSS: true, printContainer: true, operaSupport: true});
 }
 $(document).ready(function(){
+   $(".book").show();
    a();
+   $(".book").hide();
 })
 </script>
  <style>
@@ -108,7 +110,7 @@ body {
 </head>
 <body>
 
-<div class="book">
+<div class="book" style="display:none">
  <div class="page w3cbbs">
   <div class="subpage">Page 1/2</div> 
  </div>
